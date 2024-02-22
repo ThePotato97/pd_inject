@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  pdinject:
+    image: ghcr.io/thepotato97/pd_inject:latest
+    restart: unless-stopped
+    volumes:
+      - ./settings.json:/usr/src/app/settings.json
+    environment:
+      NGROK_AUTHTOKEN: "YOUR_NGROK_AUTH"
